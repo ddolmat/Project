@@ -8,4 +8,4 @@
 7. 재사용
 
 -----
-[back log](https://docs.google.com/spreadsheets/d/1LPyXxAUbNaOTHppnNEJnpCbMrBBztdQoDD94UjJKM80/edit?usp=sharing)
+[backlog](https://docs.google.com/spreadsheets/d/1LPyXxAUbNaOTHppnNEJnpCbMrBBztdQoDD94UjJKM80/edit?usp=sharing)
