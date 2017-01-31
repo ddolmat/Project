@@ -1,9 +1,9 @@
 # daum.net UI
-네비게이션 컴포넌트
-탭UI 컴포넌트
-실시간이슈 롤링
-로그인(backend연동)
-자동완성 컴포넌트
-고정형 css, html
-재사용
-..
+1.네비게이션 컴포넌트
+2.탭UI 컴포넌트
+3.실시간이슈 롤링
+4.로그인(backend연동)
+5.자동완성 컴포넌트
+6.고정형 css, html
+7.재사용
+[back log](https://docs.google.com/spreadsheets/d/1LPyXxAUbNaOTHppnNEJnpCbMrBBztdQoDD94UjJKM80/edit?usp=sharing)
