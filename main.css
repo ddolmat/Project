@@ -1,3 +1,7 @@
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
 * {
 box-sizing:border-box;
 }
@@ -5,6 +9,7 @@ dd{
 margin:2px;
 }
 dl{
+padding-left:12px;
 display: inline-block;
 float:left;
 width:101px;
@@ -131,17 +136,18 @@ right:0px;
 position: absolute;
 overflow: hidden;
 z-index: 1;
-background:white;
+background: white; 
 }
 .service_all{
-position: absolute;
 top:0px;
 left:0px;
+height: 200px;
+background: url(./bg_line_v2.gif) repeat-y 105px 0;
 }
 .app_intro{
-margin-top:101px;
 margin-bottom:31px;
 height:100px;
+border-top: 1px solid #eeeef0;
 overflow: hidden;
 }
 .new_app{
@@ -156,11 +162,12 @@ height: 100px;
 }
 .service_bottom{
 margin-top: auto;
-position: absolute;
+position: relative;
 bottom:0px;
 left:0px;
 width:515px;
 height: 31px;
+background-color: #f4f5f7;
 }
 .hidden{
 display: none;
@@ -171,7 +178,50 @@ width:321px;
 height:112px;
 }
 .search_bar{
+margin-top: 45px;
 float:left;
 width:446px;
-height:39px;
+height:40px;
+background:url(./bg_daum_v10.png?v=1683) no-repeat 0 0;
+}
+.search_input{
+font-size:16px;
+font-weight: bold;
+margin: 9px 9px;
+width:358px;
+height:18px;
+border:1px solid transparent;
+background: transparent; 
+
+}
+.search_btn{
+overflow: hidden;
+float: right;
+width: 66px;
+height: 39px;
+line-height: 39px;
+background-color: transparent;	
+text-indent:-9999px;
+border: 0px;
+outline: 0px;
+}
+
+#nav_close{
+background: url(./btn_daum_v5.png?v=1669) no-repeat 0 0;
+position: absolute;
+top: 5px;
+right: 9px;
+width: 21px;
+height: 21px;
+background-position: -176px -66px;
+text-indent: -9999px;
+border: 0px;
+outline: 0px;
+}
+#daum{
+margin-top: 18px;
+float: right;
+}
+.search_on{
+background: url(./bg_daum_v10.png?v=1683) no-repeat 0 -45px;	
 }
