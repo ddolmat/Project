@@ -12,47 +12,50 @@
 		
 			</div>
 			<nav class="navi">
-				<ul>
-				<li>가</li>
-				<li>나</li>
-				<li>다</li>
-				<li>라</li>
-				<li>마</li>
-				<li>바</li>
-				<li>사</li>
-				<li>아</li>
-				<li>자</li>
-				<li>차</li>
-				<li>카</li>
-				<li>타</li>
+				<ul class="left">
+				<li class="link_svc fw_bold"><a href="#">카페</a></li>
+				<li class="link_svc"><a href="#">메일</a></li>
+				<li class="link_svc"><a href="#">블로그</a></li>
+				<li class="link_svc"><a href="#">브런치</a></li>
+				<li class="link_svc"><a href="#">쇼핑</a></li>
+				<li class="link_svc"><a href="#">지도</a></li>
+				<li class="link_svc"><a href="#">사전</a></li>
+				<li class="link_svc"><a href="#">팁</a></li>
+				<li class="link_svc img_vert fw_bold"><a href="#">뉴스</a></li>
+				<li class="link_svc"><a href="#">증권</a></li>
+				<li class="link_svc"><a href="#">부동산</a></li>
+				<li class="link_svc"><a href="#">영화</a></li>
+				<li class="link_svc"><a href="#">아고라</a></li>
+				<li class="link_svc"><a href="#">tv팟</a></li>
+				<li class="link_svc"><a href="#">웹툰</a></li>
 				</ul>
-				<ul>	
-				<li>1</li>
-				<li>2</li>
-				<li id="view_more">더보기</li>
+				<ul class="img_vert right">	
+				<li class="link_svc2"><a href="#">게임</a></li>
+				<li class="link_svc2"><a href="#">같이가치</a></li>
 				</ul>
+				<span class="link_svc fw_bold"><a href="#" class="img_vert" id="view_more">더보기</a></span>
 			</nav>
 			<div class="service hidden">
 				<div class="service_all">
-					<dl>
-					<dt>ㄱ-ㄹ</dt>
+					<dl class="nav_sort">
+					<dt class="nav_tab tit1">ㄱ-ㄹ</dt>
 					<dd>가나다</dd>
 					<dd>가나다라</dd>
 					<dd>나다라</dd>
 					<dd>다</dd>
 					<dd>라</dd>
 					</dl>
-					<dl>
-					<dt>ㅁ-ㅂ</dt>
+					<dl class="nav_sort">
+					<dt class="nav_tab tit2">ㅁ-ㅂ</dt>
 					</dl>
-					<dl>
-					<dt>ㅅ-ㅇ</dt>
+					<dl class="nav_sort">
+					<dt class="nav_tab tit3">ㅅ-ㅇ</dt>
 					</dl>
-					<dl>
-					<dt>ㅈ-ㅊ</dt>
+					<dl class="nav_sort">
+					<dt class="nav_tab tit4">ㅈ-ㅊ</dt>
 					</dl>
-					<dl>
-					<dt>ㅋ-ㅎ</dt>
+					<dl class="nav_sort">
+					<dt class="nav_tab tit5">ㅋ-ㅎ</dt>
 					</dl>
 				</div>
 				<div class="app_intro">
@@ -65,7 +68,7 @@
 			</div>
 		</div>
 		<div class="top_head">
-			<div class="logo"><img src="./101624314.png" width="138" height="110" id="daum" class="img_init" alt="Daum"></div>
+			<div class="logo"><img src="./images/101624314.png" width="138" height="110" id="daum" class="img_init" alt="Daum"></div>
 			<div class="search_bar">
 				<input type="text" name="search_bar" class="search_input" placeholder="">
 				<button class="search_btn">검색</button>
@@ -81,7 +84,25 @@
 				<div class="login">login</div>
 			</aside>
 			<article id="main">
-				<div class="media">media</div>
+				<div class="media">
+					media
+					<div id="mediaTab">
+						<div class="mediaTab_view">
+							<div class="mediaTab_wrap">
+								<div class="tab_cont news1"><dt>news1</dt><dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit vel iure laudantium a, nostrum libero, laborum non eligendi esse? Sunt eius enim officia doloribus aliquam, aliquid fugit, impedit facere atque.</dd></div>
+								<div class="tab_cont news2"><dt>news2</dt><dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis voluptatibus dolorem, repudiandae aliquam sapiente possimus voluptas deleniti minus, fugiat dolore ad aspernatur! Explicabo, veniam velit ab, sed nihil libero. Earum.</dd></div>
+								<div class="tab_cont news3"><dt>news3</dt><dd></dd></div>
+								<div class="tab_cont enter"><dt>enter</dt></div>
+								<div class="tab_cont sport"><dt>sport</dt></div>
+								<div class="tab_cont car"><dt>car</dt></div>
+								<div class="tab_cont life"><dt>life</dt></div>
+								<div class="tab_cont tv"><dt>tv</dt></div>
+							</div>
+						</div>
+					</div>
+					<button id="mediaPrevBtn" class="ir">이전탭</button>
+					<button id="mediaNextBtn" class="ir">다음탭</button>
+				</div>
 				<div class="multi">multi</div>
 				<div class="story">story</div>	
 			</article>
