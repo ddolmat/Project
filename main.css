@@ -297,9 +297,20 @@ div{
 	transition:All 0.6s, ease-in-out;
 }
 .tab_cont{
-	height:375px;
 	width: 427px;
 	position: absolute;
+}
+#funGrpTab{
+	padding-top: 43px;
+}
+.funGrpTab_view{
+	width:427px;
+	height: 237px;
+	margin-left: 25px;
+	overflow: hidden;
+}
+.funGrpTab_wrap{
+	transition:All 0.6s, ease-in-out;
 }
 .ir{
 	text-indent: -9999px;
@@ -309,12 +320,12 @@ div{
     line-height: 23px;
     background-color: transparent;
 }
-#mediaPrevBtn, #mediaNextBtn{	
+#mediaPrevBtn, #mediaNextBtn, #funGrpPrevBtn, #funGrpNextBtn{	
 	border: 0px;
 	outline: 0px;
     overflow: hidden;
     background: url(./images/btn_daum_v5.png?v=1669) no-repeat 0 0;
 }
-#mediaNextBtn{
+#mediaNextBtn, #funGrpNextBtn{
 	background-position: -32px 0px;
 }
