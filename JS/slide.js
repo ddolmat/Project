@@ -1,4 +1,4 @@
-(function setSlidePosition(slideWrap){
+function setSlidePosition(slideWrap){
 	var wrapWidth = parseInt(window.getComputedStyle(slideWrap.parentNode).width);
 	var nums = slideWrap.children.length;
 	setTrans(slideWrap, 0, "");
@@ -83,4 +83,4 @@ function moveNext(slideWrap, x, info){
 	x -= info.width;
 	setTrans(slideWrap, x, "");
 	return;	
-})(this);
+}
