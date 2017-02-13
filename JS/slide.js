@@ -1,5 +1,35 @@
+function findSlideWraps(){
+	var tabWraps = {};
+	var wraps = document.querySelectorAll(".slideWrap");
+	for(var i = 0; i < wraps.length; i++){
+		var objKey = wraps[i].className.replace(/.*\#(\w+\d*).*/, "$1");
+		tabWraps[objKey] = wraps[i];
+	}
+	return tabWraps;
+}
+
+function getTabInfo(tabWraps){
+	var tabInfo = {};
+	for(var prop in tabWraps){
+		tabInfo[prop] = setSlidePosition(tabWraps[prop]);;
+	}
+	return tabInfo;
+}
+
+function getBtnID(){
+	var btns = document.querySelectorAll(".slide_btn");
+	var btnID = {Prev:{}, Next:{}};
+	for(var i = 0; i < btns.length; i++){
+		var firstKey = btns[i].id.replace(/.*(\w{4})Btn/, "$1");
+		var secondKey = btns[i].id.replace(/(.*)\w{4}Btn/, "$1");
+		btnID[firstKey][secondKey] = btns[i].id;
+	}
+	return btnID;
+}
+
 function setSlidePosition(slideWrap){
 	var wrapWidth = parseInt(window.getComputedStyle(slideWrap.parentNode).width);
+	var tr = window.getComputedStyle(slideWrap).transition;
 	var nums = slideWrap.children.length;
 	setTrans(slideWrap, 0, "");
 	for(var i = 0; i < nums; i++){
@@ -7,6 +37,7 @@ function setSlidePosition(slideWrap){
 	}
 	insertClone(slideWrap, wrapWidth);
 	return {
+			tr:tr,
 			width:wrapWidth,
 			nums:nums
 	};
@@ -30,30 +61,28 @@ function setTrans(node, x, tr){
 	node.style.transition = tr;
 }
 
-//prev, next버튼들에 각각 동일한 클래스값을 줘서 if문을 줄일수 있을것같다. classList.contains활용.
 function selectAction(id, tabWraps, btnID, tabInfos, flag){
 	if(flag.done === false) return;
 	flag.done = false;
-	var x = {
-		media:getX(tabWraps.media),
-		fun:getX(tabWraps.fun)
-	};
-	if(id === btnID.media.prev){
-		movePrev(tabWraps.media, x.media, tabInfos.media);
-	}else if(id === btnID.media.next){ 
-		moveNext(tabWraps.media, x.media, tabInfos.media);
-	}else if(id === btnID.fun.prev){ 
-		movePrev(tabWraps.fun, x.fun, tabInfos.fun);
-	}else if(id === btnID.fun.next){ 
-		moveNext(tabWraps.fun, x.fun, tabInfos.fun);
-	}else {
+	var x = getX(tabWraps);
+	var tab = id.replace(/(.*)\w{4}Btn/, "$1");
+	var direction = id.replace(/.*(\w{4})Btn/, "$1");
+	if(direction === "Next"){
+		moveNext(tabWraps[tab], x[tab], tabInfos[tab]);
+	} else if(direction === "Prev") {
+		movePrev(tabWraps[tab], x[tab], tabInfos[tab]);
+	} else {
 		flag.done = true;
 		return;
 	}
 }
 
 function getX(wrap){
-	return +wrap.style.transform.replace(/translate3d\((-?\d+).+/, "$1");	
+	var x = {};
+	for(var prop in wrap){
+		x[prop] = +wrap[prop].style.transform.replace(/translate3d\((-?\d+).+/, "$1");	
+	}
+	return x;	
 }
 
 function movePrev(slideWrap, x, info){
@@ -62,7 +91,7 @@ function movePrev(slideWrap, x, info){
 		var mod2 = mod + info.width;
 		setTrans(slideWrap, mod, "none");
 		setTimeout(function(){
-			setTrans(slideWrap, mod2, "All 0.6s, ease-in-out");
+			setTrans(slideWrap, mod2, info.tr);
 		}, 10);
 		return;
 	}
@@ -72,11 +101,11 @@ function movePrev(slideWrap, x, info){
 }
 
 function moveNext(slideWrap, x, info){
-	var lim = info.nums * info.width;
-	if(x === -lim) {
+	var lim = -(info.nums * info.width);
+	if(x === lim) {
 		setTrans(slideWrap, 0, "none");
 		setTimeout(function(){
-			setTrans(slideWrap, -info.width, "All 0.6s, ease-in-out");		
+			setTrans(slideWrap, -info.width, info.tr);		
 		}, 10);
 		return;	
 		}
@@ -84,3 +113,4 @@ function moveNext(slideWrap, x, info){
 	setTrans(slideWrap, x, "");
 	return;	
 }
+
