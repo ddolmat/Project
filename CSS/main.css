@@ -1,3 +1,8 @@
+dt{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
 :focus {
  	outline-color: transparent;
  	outline-style: none;
@@ -320,12 +325,12 @@ div{
     line-height: 23px;
     background-color: transparent;
 }
-#mediaPrevBtn, #mediaNextBtn, #funGrpPrevBtn, #funGrpNextBtn{	
+#mediaPrevBtn, #mediaNextBtn, #funPrevBtn, #funNextBtn{	
 	border: 0px;
 	outline: 0px;
     overflow: hidden;
     background: url(../images/btn_daum_v5.png?v=1669) no-repeat 0 0;
 }
-#mediaNextBtn, #funGrpNextBtn{
+#mediaNextBtn, #funNextBtn{
 	background-position: -32px 0px;
 }
