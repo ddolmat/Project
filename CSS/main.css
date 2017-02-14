@@ -250,7 +250,7 @@ div{
 	background-position: 0px -250px;
 }
 .tit5{
-	 background-position: -40px -250px;
+	background-position: -40px -250px;
 }
 #daum{
 	margin-top: 18px;
@@ -290,7 +290,7 @@ div{
 	font-weight: bold;
 }
 #mediaTab{
-	padding-top: 43px;
+	1padding-top: 13px;
 }
 .mediaTab_view{
 	width:427px;
@@ -299,14 +299,14 @@ div{
 	overflow: hidden;
 }
 .mediaTab_wrap{
-	transition:All 0.6s, ease-in-out;
+	transition:All 0.4s, ease-in-out;
 }
 .tab_cont{
 	width: 427px;
 	position: absolute;
 }
 #funGrpTab{
-	padding-top: 43px;
+	1padding-top: 43px;
 }
 .funGrpTab_view{
 	width:427px;
@@ -315,7 +315,7 @@ div{
 	overflow: hidden;
 }
 .funGrpTab_wrap{
-	transition:All 0.6s, ease-in-out;
+	transition:All 0.8s, ease-in-out;
 }
 .ir{
 	text-indent: -9999px;
@@ -333,4 +333,7 @@ div{
 }
 #mediaNextBtn, #funNextBtn{
 	background-position: -32px 0px;
+}
+.tabs{
+	display:inline-block;
 }
