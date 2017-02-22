@@ -1,0 +1,64 @@
+var blog = {
+  view : document.querySelector(".view"),
+  init : function() {
+    this.registerEvents();
+  },
+
+  registerEvents : function() {
+    var btn = document.querySelector("button");
+    btn.addEventListener("click", function() {
+      var url = "http://jsonplaceholder.typicode.com/posts/1";
+      this.sendAjax(url);
+    }.bind(this));
+  },
+  
+  sendAjax : function(url) {
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", function(){
+      var data = JSON.parse(oReq.responseText);
+      var temp = "<dt>"+data.title+"</dt>"+"<dd>"+data.body+"</dd>";
+      this.view.innerHTML = temp;
+    }.bind(this));
+    oReq.open("GET", url);
+	oReq.send();
+  }
+  
+  
+}
+
+blog.init();
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  
+<div class="container">
+  <section class="view">
+    
+  </section>
+  <button>가져와</button>
+</div>
+
+</body>
+</html>
+
+.view {
+  
+  width:200px;
+  height:150px;
+  background-color:#8da6ce;
+  overflow: scroll;
+}
+button {
+  margin-top:20px;
+  width:80px;
+  height:40px;
+}
+dt{
+  font-weight: bold;
+}

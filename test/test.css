@@ -1,0 +1,55 @@
+.test1View, .test2View{
+	overflow: hidden;
+}
+.test1View{
+	position: relative;
+	width:300px;
+	height:200px;
+}
+.test2View{
+	position: relative;
+	width:200px;
+	height: 133px;
+	margin-top: 30px;
+}
+.test1Wrap{
+	transition: All 0.6s, ease-in-out;			
+}
+.test2Wrap{
+	transition: All 0.3s, ease-in-out;
+}
+.test1_slide, .test2_slide{
+	position: absolute;
+	color: white;
+	text-align: center;
+}
+.test1_slide{
+	width:300px;
+	font-size: 200px;
+	font-weight: 900;
+	line-height: 110%;
+}
+.test2_slide{
+	width:200px;
+	font-size: 133px;
+	font-weight: 900;
+	line-height: 110%;
+}
+.no1{
+	background-color:red;
+}
+.no2{
+	background-color: blue;
+}
+.no3{
+	background-color: green;
+}
+.no4{
+	background-color: orange;
+}
+.no5{
+	background-color: purple;
+}
+.slide_btn{
+	display: inline-block;
+}

@@ -70,8 +70,10 @@
 		<div class="top_head">
 			<div class="logo"><img src="./images/101624314.png" width="138" height="110" id="daum" class="img_init" alt="Daum"></div>
 			<div class="search_bar">
-				<input type="text" name="search_bar" class="search_input" placeholder="">
+				<input type="text" name="search_bar" id="search_bar" class="search_input" list="languages" placeholder="">
 				<button class="search_btn">검색</button>
+				<ul class = "suggest hidden">
+				</ul>
 			</div>
 		</div>	
 
@@ -141,11 +143,13 @@
 			</article>
 		</main>
 		<footer class="foot">
-			foot
 		</footer>
 	</div>
 	<script type="text/javascript" src="./JS/main.js"></script>
 	<script type="text/javascript" src="./JS/slide.js"></script>
+	<script type="text/javascript" src="./JS/ajax.js"></script>
+	<script type="text/javascript" src="./JS/searchBar.js"></script>
+
 	<!--<script type="text/javascript" src="./JS/tabUI.js"></script>-->
 </body>
 </html>

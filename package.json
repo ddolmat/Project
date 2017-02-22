@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ddolmat/Project/issues"
   },
-  "homepage": "https://github.com/ddolmat/Project#readme"
+  "homepage": "https://github.com/ddolmat/Project#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
 }

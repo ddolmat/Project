@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+    <link rel="stylesheet" href="./test.css">
+  </head>
+  <body>
+    <div class="test1">
+      <div class="test1View">
+        <div class="test1Wrap #test1 slideWrap">
+          <div class="test1_slide no1">1</div>
+          <div class="test1_slide no2">2</div>
+          <div class="test1_slide no3">3</div>
+          <div class="test1_slide no4">4</div>
+          <div class="test1_slide no5">5</div>
+        </div>
+      </div>
+      <button id="test1PrevBtn" class="slide_btn">이전</button>
+      <button id="test1NextBtn" class="slide_btn">다음</button>
+    </div>
+    <div class="test2">
+      <div class="test2View">
+        <div class="test2Wrap #test2 slideWrap">
+          <div class="test2_slide no1">1</div>
+          <div class="test2_slide no2">2</div>
+          <div class="test2_slide no3">3</div>
+        </div>
+      </div>
+      <button id="test2PrevBtn" class="slide_btn">이전</button>
+      <button id="test2NextBtn" class="slide_btn">다음</button>
+    </div>
+    <div id="mocha"></div>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/slide.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <!--<script src="./main.test.js"></script>-->
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
+
